@@ -1,0 +1,21 @@
+<div class="posts-show">
+  <div class="container">
+    <div class="posts-show-item">
+      <div class="post-user-name">
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <%= link_to(@user.name, "/users/#{@user.id}") %>
+      </div>
+
+      <p>
+      <%= @tweet.content%>
+      </p>
+      <div class="post-time">
+        <%= @tweet.created_at%>
+      </div>
+      <% if @tweet.user.id == @current_user.id%>
+        <div class="post-menus">
+        <%= link_to("編集", "/posts/#{@tweet.id}/edit") %>
+        <%= link_to("削除", "/posts/#{@tweet.id}/destroy", {method: "post"}) %>
+        </div>
+      <%end%>
+    </div>

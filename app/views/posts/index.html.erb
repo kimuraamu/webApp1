@@ -1,0 +1,26 @@
+<form method="get" action="#" class="search_container">
+  <input type="text" size="35" placeholder="掲示板検索">
+  <input type="submit" value="Search">
+</form>
+
+<div class="main posts-index">
+  <div class="posts-container">
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-right">
+          <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="newboard">  <!-- 掲示板新規作成 -->
+  <hr>
+    <p>--新規作成-- </p>
+    <%= form_tag("/posts/create") do %>
+      <textarea name="title" rows="1" cols="30" maxlength="25"></textarea>
+      <input type="submit" name="" value="作成">
+    <% end %>
+  <hr>
+</div>

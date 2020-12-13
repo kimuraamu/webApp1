@@ -1,0 +1,235 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.users-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 48px;
+  color: #bcc8d4;
+}
+
+.users-index-item {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  display: table;
+  width: 100%;
+}
+
+.user-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.user-name a {
+  font-weight: 600;
+}
+
+.user-name a:hover {
+  color: #3ecdc6;
+}
+
+.user-left {
+  float: left;
+  width: 10%;
+}
+
+.user-right {
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* users/show ================================ */
+.user-show {
+  text-align: center;
+  padding-top: 70px;
+}
+
+.user {
+  margin-bottom: 20px;
+}
+
+.user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 20px 0 10px;
+  object-fit: cover;
+  background-color: whitesmoke;
+}
+
+.user h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.user p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.user a {
+  color: #8899a6;
+  text-decoration: underline;
+  font-weight: 200;
+}
+
+.user span {
+  color: #afb6bf;
+  font-weight: 200;
+  padding: 0 6px 0 8px;
+}
+
+.user-tabs {
+  margin-top: 40px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-tabs li {
+  float: left;
+}
+
+.user-tabs li.active {
+  border-bottom: 2px solid #3ecdc6;
+}
+
+.user-tabs li.active a {
+  color: #57575f;
+}
+
+.user-tabs a {
+  display: inline-block;
+  padding: 16px 30px;
+  color: #afb6bf;
+}
+
+/* users/new, users/edit ================================ */
+.users-form input {
+  margin-bottom: 15px;
+}
+
+/* newuser ================================ */
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  background-color:#222222;
+  overflow: hidden;
+  padding-bottom: 200px;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 80px;
+  margin-bottom: 50px;
+  font: 300 60px 'Oswald', sans-serif;
+  letter-spacing: 6px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+/* Begin Left Contact Page */
+.form-horizontal {
+  float: left;
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400px;
+}
+
+.form-control {
+  width: 500px;
+  height: 40px;
+  background-color: #111;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  left:140px;
+}
+
+
+.send-button {
+  margin-top: 30px;
+  height: 40px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  position: relative;
+  left:180px;
+}
+
+.button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 300 14px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+.login-img{
+  width: 3%;
+  height: auto;
+  position: relative;
+  left:570px;
+  bottom:90px;
+}
+
+.login-img2{
+  width: 3%;
+  height: auto;
+  position: relative;
+  left:765px;
+  bottom:90px;
+}
+
+.sign-img{
+  width: 3%;
+  height: auto;
+  position: relative;
+  left:550px;
+  bottom:90px;
+}
+
+.sign-img2{
+  width: 3%;
+  height: auto;
+  position: relative;
+  left:793px;
+  bottom:90px;
+}
+
+
+
+

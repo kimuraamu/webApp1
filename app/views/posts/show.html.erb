@@ -1,0 +1,70 @@
+<div class = "posts">
+  <div class="posts-show">
+    <div class="container">
+      <div class="posts-show-item">
+        <div class="post-user-name">
+          <p>作成者 : <%=@user.name%></p>
+        </div>
+
+        <p>
+        <%= @post.content%>
+        </p>
+        <div class="post-time">
+          <%= @post.created_at%>
+        </div>
+        <% if@post.user.id == @current_user.id%>
+          <div class="post-menus">
+            <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+          </div>
+        <%end%>
+      </div>
+    </div>
+    <div class="main-tweet">
+      <div class="container">
+        <% @tweets.each do |tweet| %>
+          <div class="tweet-item">
+            <div class = "tweet-no">
+              <span>書き込みNO : </span>
+              <%= tweet.id %> <!-- 書き込み番号 -->
+            </div>
+            <div class="tweet-user-name">
+              <% writer = User.find_by(id: tweet.user_id) %> <!-- 書き込みユーザーの判別 -->
+              <span> &nbsp; &nbsp; &nbsp;by_</span> <!-- 空欄+"by_"の表示 -->
+              <%= writer.name%> <!-- ユーザー名 -->
+            </div>
+              <!-- 内容 -->
+            <div class="tweet-content">
+              <%= tweet.content%><br>
+              <% if tweet.has_attribute?(:imagename)%>
+                <% unless tweet.imagename.nil? %>
+                <img src="<%= "/uploads/#{tweet.imagename}" %>">
+                <% end %>
+              <% end %>
+              <!-- 書き込み削除 -->
+              <span>
+                <% if@post.user.id == @current_user.id%>
+                <%= link_to("削除", "/posts/#{@post.id}/destroy_tweet/#{tweet.id}", {method: "post"}) %>
+              <%end%>
+              </span>
+            </div>
+              <br>
+              <br>
+              <div class="tweet-image">
+                <!-- ユーザーの画像が表示されるように、以下のsrcに値を追加してください -->
+                <img src="<%= "/user_images/#{writer.image_name}" %>">
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <% if @table != "not"%>
+      <!-- 新規投稿 -->
+      <%= form_tag("/posts/#{@id}/create_tweet") do %>
+        <input name="tweet">
+        <% if @tweets.has_attribute?(:imagename)%><input name="image" type="file"><% end %>
+        <br><input type="submit" value="投稿">
+      <% end %>
+    <% end %>
+  </div>
+</div>

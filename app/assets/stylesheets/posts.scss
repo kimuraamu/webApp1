@@ -1,0 +1,185 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//posts/index
+.posts-container{
+  display: flex;
+  flex-direction: row;
+  padding-top: 150px;
+  flex-wrap: wrap;
+}
+
+.posts-index-item {
+  background-color: whitesmoke;
+  margin       : auto;
+  width        : 200px;
+  height       : 200px;
+  border-radius: 10px 10px 10px 10px;
+  padding: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px
+  
+}
+
+.post-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.post-user-name a {
+  font-weight: 600;
+}
+
+.post-user-name a:hover {
+  color: #3ecdc6;
+}
+
+.post-left {
+  float: left;
+  width: 10%;
+}
+
+.post-right {
+  float: left;
+  width: 90%;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+//検索バー
+.search_container{
+  box-sizing: border-box;
+  position: relative;
+  top:100px;
+  left:1000px;
+}
+.search_container input[type="text"]{
+  background: gray;
+  border: none;
+  height: 2.0em;
+}
+.search_container input[type="text"]:focus {
+  outline: 0;
+}
+.search_container input[type="submit"]{
+  cursor: pointer;
+  border: none;
+  background: black;
+  color: #fff;
+  outline : none;
+  height: 2.2em;
+}
+.search_container ::-webkit-input-placeholder {
+  color: black;
+}
+
+
+/* posts/show ================================ */
+.posts-show{
+  position: relative;
+  top:100px;
+  border-radius: 10px;
+}
+
+.posts-show form {
+  display: inline;
+}
+.posts-show-item {
+  padding: 30px;
+  background-color:gray;
+  box-shadow: 0 2px 6px #c1ced7;
+  overflow: hidden;
+}
+
+.posts-show-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.posts-show-item .post-user-name a {
+  vertical-align: middle;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.posts-show-item p {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.post-time {
+  color: #8899a6;
+  margin-bottom: 10px;
+}
+
+.post-menus {
+  float: right;
+}
+
+.post-menus a, .post-menus input {
+  color: #8899a6;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.post-user-name{
+  position: relative;
+  bottom: 0
+}
+
+.tweet-item {
+  padding: 5px;
+  background-color:#222222;
+  box-shadow: 0 2px 6px #c1ced7;
+  overflow: hidden;
+  color:white;
+}
+
+.tweet-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  box-shadow: 0 2px 6px #c1ced7;
+  vertical-align: middle;
+  object-fit: cover;
+  position: relative;
+  bottom:20px;
+  background-color:whitesmoke;
+}
+
+.tweet-user-name{
+  position: relative;
+  left:50px;
+  top:110px;
+}
+
+.tweet-content{
+  position: relative;
+  left:160px;
+  top:30px;
+}
+
+
+/* posts/new ================================ */
+.posts-new textarea {
+  font-size: 20px;
+  padding: 10px;
+  min-height: 140px;
+  border: 1px solid rgb(216, 218, 223);
+  resize: none;
+}
+
+.posts-new textarea::-webkit-input-placeholder {
+  font-size: 24px;
+  opacity: 0.5;
+}

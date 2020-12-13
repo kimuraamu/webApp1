@@ -1,0 +1,98 @@
+<section id="contact">
+  
+  <h1 class="section-header">New User</h1>
+  
+  <div class="contact-wrapper">
+    
+      <!---------------- 
+
+      CONTACT PAGE LEFT 
+    
+      -----------------> 
+    
+    <div class="form-horizontal">
+      <%= form_tag("/users/create") do%> 
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" 
+            value="<%=@user.name%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" 
+            value="<%=@user.email%>">
+          </div>
+        </div>
+
+        <input class="form-control" rows="10" placeholder="password" name="password" 
+        value = "<%=@user.password%>">
+        
+        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+          <div class="button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        
+        </button>   
+      <%end%>
+    </div>
+    
+      <!---------------- 
+
+      CONTACT PAGE RIGHT 
+    
+      -----------------> 
+    
+      
+    
+  </div>
+  
+</section>  
+  
+  
+
+
+
+Resources
+
+
+<div class="main users-new">
+  <div class="container">
+    <div class="form-heading">新規ユーザー登録</div>
+    <div class="form users-form">
+      <div class="form-body">
+      <% @user.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
+        <%= form_tag("/users/create") do%>
+          <p>ユーザー名</p>
+          <input name="name" value = "<%=@user.name%>">
+          <p>メールアドレス</p>
+          <input name="email" value = "<%=@user.email%>">
+          <p>パスワード</p>
+          <input name="password" value = "<%=@user.password%>">
+          <input type="submit" value="新規登録">
+        <!-- end を追加してください -->
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+  <% end %>
+
+  <%= form_tag("/login") do %>
+    <div class="form-group">
+      <div class="col-sm-12">
+        <input type="email" class="form-control" placeholder="EMAIL" name="email" 
+        value="<%= @email %>">
+      </div>
+    </div>

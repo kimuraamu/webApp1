@@ -1,0 +1,65 @@
+<section id="contact">
+  
+  <h1 class="section-header">SignUp</h1>
+
+  <img class="sign-img" src="/肉球.png">
+
+  <img class="sign-img2" src="/肉球.png">
+  
+  <div class="contact-wrapper">
+    
+      <!---------------- 
+
+      CONTACT PAGE LEFT 
+    
+      -----------------> 
+  <% @user.errors.full_messages.each do |message| %>
+    <div class="form-error">
+      <%= message %>
+    </div>
+  <% end %>
+    
+    <div class="form-horizontal">
+      <%= form_tag("/users/create") do%> 
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" placeholder="NAME" name="name" 
+            value="<%=@user.name%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" placeholder="EMAIL" name="email" 
+            value="<%=@user.email%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input class="form-control" placeholder="PASSWORD" name="password" 
+            value = "<%=@user.password%>">
+          </div>
+        </div>
+        
+        <button class="btn btn-primary send-button"  type="submit" value="SEND">
+          <div class="button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        
+        </button>   
+      <%end%>
+    </div>
+    
+      <!---------------- 
+
+      CONTACT PAGE RIGHT 
+    
+      -----------------> 
+    
+      
+    
+  </div>
+  
+</section>  
+
